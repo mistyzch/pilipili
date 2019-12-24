@@ -5,6 +5,7 @@ package com.pilipili.dao;
  */
 public interface UserDao {
 
+    public User selectUserByAccountAndPwd(String account,String password);
 
 
 
