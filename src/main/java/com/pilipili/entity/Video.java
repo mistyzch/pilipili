@@ -12,14 +12,13 @@ public class Video implements Serializable {
     private String pictureUrls;
     private String videoUrl;
     private Integer state;
-    private User user_id;
-    private Category category_id;
-
+    private User user;
+    private Category category;
 
     public Video() {
     }
 
-    public Video(String name, String desc, Date releaseDate, Integer clickTimes, String pictureUrls, String videoUrl, Integer state, User user_id, Category category_id) {
+    public Video(String name, String desc, Date releaseDate, Integer clickTimes, String pictureUrls, String videoUrl, Integer state, User user, Category category) {
         this.name = name;
         this.desc = desc;
         this.releaseDate = releaseDate;
@@ -27,8 +26,8 @@ public class Video implements Serializable {
         this.pictureUrls = pictureUrls;
         this.videoUrl = videoUrl;
         this.state = state;
-        this.user_id = user_id;
-        this.category_id = category_id;
+        this.user = user;
+        this.category = category;
     }
 
     public Integer getId() {
@@ -95,19 +94,19 @@ public class Video implements Serializable {
         this.state = state;
     }
 
-    public User getUser_id() {
-        return user_id;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser_id(User user_id) {
-        this.user_id = user_id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public Category getCategory_id() {
-        return category_id;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategory_id(Category category_id) {
-        this.category_id = category_id;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
