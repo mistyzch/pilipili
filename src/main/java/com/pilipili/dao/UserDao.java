@@ -44,7 +44,7 @@ public interface UserDao {
      * @param user_id  用户id
      * @param video_id  视频id
      */
-    public void insertVide(Video video,Integer user_id,Integer video_id);
+    public void insertVideo(Video video,Integer user_id,Integer video_id);
 
     /**
      * 新增用户喜欢/点赞
@@ -76,4 +76,20 @@ public interface UserDao {
      */
     public void updateUserCollection(Integer video_id, Integer user_id, int state);
 
+    /**
+     * 用户给视频添加评论
+     * @param user_id  用户id
+     * @param video_id 视频id
+     * @param comment  评论
+     */
+    public void insertComment(Integer user_id,Integer video_id,String comment);
+
+    /**
+     * 回复评论
+     * @param user_id  用户id
+     * @param video_id  视频id
+     * @param comment  评论
+     * @param parent_id  要回复评论的id
+     */
+    public void addComment(Integer user_id,Integer video_id,String comment,Integer parent_id);
 }
