@@ -1,13 +1,20 @@
 package com.pilipili.entity;
+/**
+ * @author: ABKing
+ * @Date: 2019/12/24 15:42
+ * @Description: 收藏
+ **/
+import java.io.Serializable;
 
-public class User {
-    Integer id;
-    String account;
-    String password;
-    Integer gender;
-    Integer age;
-    String tel;
-    String portraitUrl;
+
+public class User implements Serializable {
+    private Integer id;
+    private String account;
+    private String password;
+    private Integer gender;
+    private Integer age;
+    private String tel;
+    private String portraitUrl;
 
 
     public User() {
