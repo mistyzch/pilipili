@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/VideoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/VideoService.java" afterDir="false" />
+    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="dao层">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pilipili.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +45,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -81,8 +76,16 @@
       <updated>1577157133920</updated>
       <workItem from="1577157137125" duration="2127000" />
       <workItem from="1577167241116" duration="1043000" />
-      <workItem from="1577171065556" duration="1062000" />
+      <workItem from="1577171065556" duration="1974000" />
     </task>
+    <task id="LOCAL-00001" summary="dao层">
+      <created>1577172332023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577172332023</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dao层" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao层" />
   </component>
 </project>
