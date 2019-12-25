@@ -49,7 +49,24 @@ public class UserController {
 
     @RequestMapping(value = "doregister",method = RequestMethod.POST)
     public String doRegister(User user,Model model){
-        return "redirect:login";
+        if(user.getAccount()!=null
+                &&user.getPassword()!=null
+                &&user.getTel()!=null
+                &&user.getTel()!=""
+                &&user.getAccount()!=""
+                &&user.getPassword()!=""){
+            User user1 = userService.selectUserByAccount(user.getAccount());
+            if(user1!=null){
+                //提示该用户已存在
+                return "redirect:register";
+            }else {
+                userService.insertUser(user);
+                return "redirect:login";
+            }
+        }else{
+            //提示信息未填写全
+            return "redirect:register";
+        }
     }
 
 }
