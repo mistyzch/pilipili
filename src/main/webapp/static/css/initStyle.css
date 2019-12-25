@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+a{
+    /*text-underline: none;*/
+    color:black ;
+    text-decoration: none;
+}
+a:hover{
+    color: #00BEE7;
+}
+ul,ol{
+    margin-bottom: 0px;
+}
+li{
+    list-style: none;
+
+}
+.nav-top{
+    width: 100%;
+    height: 40px;
+}
+.nav-top li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px 30px;
+}

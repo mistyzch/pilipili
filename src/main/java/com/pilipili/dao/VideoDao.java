@@ -51,6 +51,11 @@ public interface VideoDao {
      */
     public void deleteVideoById(Integer video_id);
 
+    /**
+     * 获取热度前num的视频信息
+     * @param num
+     */
+    public List<Video> selectHotVides(Integer num);
 
 
 
