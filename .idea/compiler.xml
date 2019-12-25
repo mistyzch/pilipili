@@ -9,5 +9,8 @@
         <module name="pilipili" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pilipili" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
