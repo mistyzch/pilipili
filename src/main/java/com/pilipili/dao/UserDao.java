@@ -92,4 +92,12 @@ public interface UserDao {
      * @param parent_id  要回复评论的id
      */
     public void addComment(Integer user_id,Integer video_id,String comment,Integer parent_id);
+
+
+
+
+
+
+
+
 }
