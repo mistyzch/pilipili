@@ -1,11 +1,7 @@
 package com.pilipili.service;
 
 /**
- * Create by misty on 2019/12/24 15:09
+ * Create by misty on 2019/12/25 13:06
  */
-public class VideoService {
-
+public interface VideoService {
 }
-
-
-
