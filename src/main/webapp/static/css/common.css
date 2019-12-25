@@ -1,0 +1,22 @@
+/*dede58.com 做最好的织梦整站模板下载网站*/
+/* ====== general ====== */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "020";
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.page-width {
+  width: 980px;
+  margin: 0 auto;
+}

@@ -20,8 +20,12 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <mvc:resources mapping="/css/" location="WEB-INF/static/css"/>
-    <mvc:resources mapping="/js/" location="WEB-INF/static/js"/>
+    <mvc:default-servlet-handler />
+
+    <mvc:resources mapping="/css/**" location="/static/"/>
+    <mvc:resources mapping="/js/**" location="/static/"/>
+    <mvc:resources mapping="/images/**" location="/static/"/>
+    <mvc:resources mapping="/images/cont/**" location="static/images/"/>
 
 
     <mvc:annotation-driven/>
