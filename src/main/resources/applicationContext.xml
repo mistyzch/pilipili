@@ -36,7 +36,7 @@
 
     <!-- 配置dao包 -->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-<!--        <property name="basePackage" value="misty.ssm.dao"/>  要改！！-->
+        <property name="basePackage" value="com.pilipili.dao"/>
     </bean>
 
 
