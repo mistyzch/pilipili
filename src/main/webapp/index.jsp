@@ -136,7 +136,7 @@
                 </div>
                 <div class="header-top__user">
                     <div class="login-box">
-                        <img class="" src=""/>
+                        <img class="portalUrl" src="static/images/akari.jpg" style="width:35px;border-radius:20px;margin-top: 4px;"  >
                         <a href="#">登录</a>
                         <span></span>
                         <a href="#">注册</a>
