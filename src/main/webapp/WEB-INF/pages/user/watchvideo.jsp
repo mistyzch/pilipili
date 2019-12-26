@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,21 +201,21 @@
 <div class="video">
     <div class="videoInfo">
         <p>
-        <h2>[标题]  描述</h2>
+        <h2>${video.name}</h2>
         </p>
         <p>
-            发布时间：2019-9-12 12:45:36
+            发布时间：${video.releaseDate}
         </p>
 
         <p>121点赞 &nbsp;&nbsp;&nbsp;    144评论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span style="position: relative;">
-                    <img src="../static/images/video/warnning.png" alt="" style="position: absolute; top:-3px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经作者允许禁止转载
+                    <img src="${video.pictureUrls}" alt="" style="position: absolute; top:-3px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经作者允许禁止转载
                 </span>
         </p>
     </div>
     <div class="videoPlay">
         <video controls>
-            <source src="../static/videos/夏目友人帐.mp4" type="">
+            <source src="${video.videoUrl}" type="">
         </video>
     </div>
 
