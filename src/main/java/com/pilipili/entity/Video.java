@@ -1,13 +1,12 @@
 package com.pilipili.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Video implements Serializable {
     private Integer id;
     private String name;
     private String desc;
-    private Date releaseDate;
+    private String releaseDate;
     private Integer clickTimes;
     private String pictureUrls;
     private String videoUrl;
@@ -18,7 +17,7 @@ public class Video implements Serializable {
     public Video() {
     }
 
-    public Video(String name, String desc, Date releaseDate, Integer clickTimes, String pictureUrls, String videoUrl, Integer state, User user, Category category) {
+    public Video(String name, String desc, String releaseDate, Integer clickTimes, String pictureUrls, String videoUrl, Integer state, User user, Category category) {
         this.name = name;
         this.desc = desc;
         this.releaseDate = releaseDate;
@@ -54,11 +53,11 @@ public class Video implements Serializable {
         this.desc = desc;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

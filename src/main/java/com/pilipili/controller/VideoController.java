@@ -19,10 +19,7 @@ public class VideoController {
 
     @RequestMapping("watchvideo")
     public String watchVideo(Integer id, Model model){
-        //Video video = videoService.selectVideoById(id);
-        Video video = new Video();
-        video.setName("华农兄弟");
-        video.setVideoUrl("/video/华农兄弟.mp4");
+        Video video = videoService.selectVideoById(id);
         model.addAttribute("video",video);
         return "watchvideo";
     }
