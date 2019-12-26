@@ -2,6 +2,7 @@ package com.pilipili.dao;
 
 import com.pilipili.entity.User;
 import com.pilipili.entity.Video;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Create by misty on 2019/12/24 11:37
@@ -14,7 +15,7 @@ public interface UserDao {
      * @param password  密码
      * @return
      */
-    public User selectUserByAccountAndPwd(String account, String password);
+    public User selectUserByAccountAndPwd(@Param("account") String account, @Param("password") String password);
 
     /**
      * 插入一条用户信息
@@ -29,14 +30,14 @@ public interface UserDao {
      * @param account  账号
      * @return
      */
-    public int updateUserByAccount(User user,String account);
+    public int updateUserByAccount(@Param("user") User user,@Param("account") String account);
 
     /**
      * 根据账号寻找用户
      * @param account  账号
      * @return
      */
-    public User selectUserByAccount(String account);
+    public User selectUserByAccount(@Param("account") String account);
 
     /**
      * 用户发布视频

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--其中namespace是命名空间，通过命名空间去寻找对应的sql标签
+必须要唯一，定位到dao层的接口上-->
+<mapper namespace="com.pilipili.dao.UserDao">
+    <select id="selectUserByAccountAndPwd" resultType="user">
+        select id, account, password, gender, age, tel, portraitUrl from p_user where account=#{account} and password=#{password}
+    </select>
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into p_user(account, password, gender, age, tel, portraitUrl) values(#{account}, #{password}, #{gender}, #{age}, #{tel}, #{portraitUrl})
+    </insert>
+    <update id="updateUserByAccount" parameterType="user">
+        update p_user set password=#{user.password}, gender=#{user.gender}, age=#{user.age}, tel=#{user.tel}, portraitUrl=#{user.portraitUrl} where account=#{user.account}
+    </update>
+    <select id="selectUserByAccount" resultType="user">
+        select id, account, password, gender, age, tel, portraitUrl from p_user where account=#{account}
+    </select>
+
+
+
+
+</mapper>

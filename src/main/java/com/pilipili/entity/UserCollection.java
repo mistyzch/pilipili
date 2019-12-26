@@ -8,17 +8,17 @@ import java.util.Date;
  * @Date: 2019/12/24 15:42
  * @Description: 收藏
  **/
-public class Collection implements Serializable {
+public class UserCollection implements Serializable {
     private Integer id;
     private Date date;
     private String state;
     private User user;
     private Video video;
 
-    public Collection() {
+    public UserCollection() {
     }
 
-    public Collection(Date date, String state, User user, Video video) {
+    public UserCollection(Date date, String state, User user, Video video) {
         this.date = date;
         this.state = state;
         this.user = user;
