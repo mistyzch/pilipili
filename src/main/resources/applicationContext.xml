@@ -28,15 +28,23 @@
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
+    <!--Spring集成MyBatis-->
     <!-- 配置SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
+
+        <!-- mybatis配置文件的路径 -->
+        <property name="configLocation" value="classpath:mybatis-conf.xml" />
+
+        <!-- 实例化sqlSessionFactory时需要使用上述配置好的数据源以及SQL映射文件 -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml" />
     </bean>
 
 
     <!-- 配置dao包 -->
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.pilipili.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
 
 

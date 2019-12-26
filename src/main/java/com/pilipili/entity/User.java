@@ -16,6 +16,18 @@ public class User implements Serializable {
     private String tel;
     private String portraitUrl;
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", tel='" + tel + '\'' +
+                ", portraitUrl='" + portraitUrl + '\'' +
+                '}';
+    }
 
     public User() {
     }
