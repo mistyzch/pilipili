@@ -6,10 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="">
+    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="整合了jsp页面、完成了登录、注册的控制器">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/font/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/font/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/font/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/font/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/font/fontawesome-webfont.woff" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,22 +69,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static/css" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\js" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\images" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\css" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\WEB-INF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\WEB-INF\pages\user" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\css" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\js" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\images" />
       <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp" />
     </key>
   </component>
@@ -192,7 +196,9 @@
       <workItem from="1577259725319" duration="3648000" />
       <workItem from="1577264942841" duration="5043000" />
       <workItem from="1577273065109" duration="8266000" />
-      <workItem from="1577285820848" duration="4674000" />
+      <workItem from="1577285820848" duration="4826000" />
+      <workItem from="1577319258602" duration="4300000" />
+      <workItem from="1577324776384" duration="488000" />
     </task>
     <task id="LOCAL-00001" summary="dao层">
       <created>1577172332023</created>
@@ -257,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577289549311</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="整合了jsp页面、完成了登录、注册的控制器">
+      <created>1577290677861</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577290677861</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,69 +295,70 @@
     <MESSAGE value="静态资源css\js\images、首页\更新了头像" />
     <MESSAGE value="整合了jsp页面" />
     <MESSAGE value="整合了jsp页面、完成了登录的控制器" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合了jsp页面、完成了登录的控制器" />
+    <MESSAGE value="整合了jsp页面、完成了登录、注册的控制器" />
+    <option name="LAST_COMMIT_MESSAGE" value="整合了jsp页面、完成了登录、注册的控制器" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1577287672920">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1577287672920" />
-    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577289545751">
+    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577320593175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577289545751" />
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1577290576921">
+    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577320593175" />
+    <state width="1493" height="369" key="GridCell.Tab.0.bottom" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.0.center" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.0.left" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.0.right" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.1.bottom" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.1.bottom" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.1.center" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.1.center" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.1.left" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.1.left" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.1.right" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.1.right" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.2.bottom" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.2.bottom" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.2.center" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.2.center" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.2.left" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.2.left" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state width="1493" height="190" key="GridCell.Tab.2.right" timestamp="1577290576921">
+    <state width="1493" height="369" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state width="1493" height="369" key="GridCell.Tab.2.right" timestamp="1577324602689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577290576921" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577289562483">
+    <state width="1493" height="369" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577324602689" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577290791045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577289562483" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577290791045" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577250013558">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
