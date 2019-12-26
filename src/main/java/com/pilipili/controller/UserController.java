@@ -1,6 +1,8 @@
 package com.pilipili.controller;
 
 import com.pilipili.entity.User;
+import com.pilipili.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,8 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("user")
 public class UserController {
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("login")
     public String login(){
@@ -27,15 +31,42 @@ public class UserController {
 
     @RequestMapping(value = "checkuser",method = RequestMethod.POST)
     public String checkUser(User user, Model model, HttpSession session){
-        if(user!=null){
-            System.out.println(user.getPassword());
+        if(user.getAccount()!=null
+                &&user.getPassword()!=null
+                &&user.getAccount()!=""
+                &&user.getPassword()!=""){
+            User user1 = userService.selectUserByAccountAndPwd(user.getAccount(),user.getPassword());
+            if(user1!=null){
+                session.setAttribute("user",user1);
+                return "redirect:/";
+            }else {
+                return "redirect:login";
+            }
+        }else {
+            return "redirect:login";
         }
-        return "redirect:/";
     }
 
     @RequestMapping(value = "doregister",method = RequestMethod.POST)
     public String doRegister(User user,Model model){
-        return "redirect:login";
+        if(user.getAccount()!=null
+                &&user.getPassword()!=null
+                &&user.getTel()!=null
+                &&user.getTel()!=""
+                &&user.getAccount()!=""
+                &&user.getPassword()!=""){
+            User user1 = userService.selectUserByAccount(user.getAccount());
+            if(user1!=null){
+                //提示该用户已存在
+                return "redirect:register";
+            }else {
+                userService.insertUser(user);
+                return "redirect:login";
+            }
+        }else{
+            //提示信息未填写全
+            return "redirect:register";
+        }
     }
 
 }

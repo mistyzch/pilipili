@@ -136,7 +136,7 @@
     <div data-v-3e357e28="" class="title-line"><span class="tit" style="font-size: 38px;">注册</span></div>
     <form action="doregister" method="post" class="register">
         <div class="form-group">
-            <input type="text" placeholder="昵称" name="name">
+            <input type="text" placeholder="账号" name="account">
         </div>
         <div class="form-group">
             <input type="password" placeholder="密码" name="password">

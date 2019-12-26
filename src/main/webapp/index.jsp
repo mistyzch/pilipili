@@ -138,8 +138,12 @@
                 </div>
                 <div class="header-top__user">
                     <div class="login-box">
-                        <img class="portalUrl" src="static/images/akari.jpg" style="width:35px;border-radius:20px;margin-top: 4px;"  >
-                        <a href="user/login">登录</a>
+                        <c:if test="${user != null }">
+                            <img class="portalUrl" src="static/images/akari.jpg" style="width:35px;border-radius:20px;margin-top: 4px;"  >
+                        </c:if>
+                        <c:if test="${user == null }">
+                            <a href="user/login">登录</a>
+                        </c:if>
                         <span></span>
                         <a href="user/register">注册</a>
                     </div>
