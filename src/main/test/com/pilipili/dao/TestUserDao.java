@@ -1,6 +1,8 @@
 package com.pilipili.dao;
 
+import com.pilipili.entity.Category;
 import com.pilipili.entity.User;
+import com.pilipili.entity.Video;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Before;
@@ -9,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Date;
 
 /**
  * @author: ABKing
@@ -49,7 +53,36 @@ public class TestUserDao {
         User user = userDao.selectUserByAccount("张三");
         System.out.println(user);
     }
-
-
+    @Test
+    public void testInsertVideo(){
+        User user = userDao.selectUserByAccount("张三");
+        Category category = new Category();
+        Video video = new Video("叶问4：完结篇", "", new Date(), 0, "", "", 1, user,category);
+        userDao.insertVideo(video, 1, 1);
+    }
+    @Test
+    public void testInsertUserLike(){
+        userDao.insertUserLike(1, 1);
+    }
+    @Test
+    public void testUpdateUserLike(){
+        userDao.updateUserLike(1, 1, 11);
+    }
+    @Test
+    public void testInsertUserCollection(){
+        userDao.insertUserCollection(2, 2);
+    }
+    @Test
+    public void testUpdateUserCollection(){
+        userDao.updateUserCollection(2, 2, 11);
+    }
+    @Test
+    public void testInsertComment(){
+        userDao.insertComment(2,2, "这是我的第一条评论！");
+    }
+    @Test
+    public void testAddComment(){
+        userDao.addComment(2, 2, "我回复了你的评论", 64);
+    }
 
 }
