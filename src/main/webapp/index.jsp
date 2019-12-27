@@ -139,7 +139,7 @@
                 <div class="header-top__user">
                     <div class="login-box">
                         <c:if test="${user != null }">
-                            <img class="portalUrl" src="static/images/akari.jpg" style="width:35px;border-radius:20px;margin-top: 4px;"  >
+                            <img class="portalUrl" src="${user.portraitUrl}" style="width:35px;border-radius:20px;margin-top: 4px;"  >
                         </c:if>
                         <c:if test="${user == null }">
                             <a href="user/login">登录</a>
@@ -760,36 +760,6 @@
                             <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
                         </div>
                     </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【欧美男模】 禁欲系 （西装控）</a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">煮泡面好吃还是泡泡面好吃？藤椒双辣挑战！~</a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【DEC】S5E8 化学方法的划手特效~</a>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="main-side fr">
@@ -820,218 +790,23 @@
                     </div>
                 </div>
                 <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
+                    <!--动画-->
+                    <c:forEach items="${}" var="falsh">
+                        <li class="item">
+                            <a href="video/watchvideo?id=${falsh.id}" class="img-link">
+                                <img src="${falsh.url}" alt="#">
+                                <span class="mask"></span>
+                                <span class="time">3:39</span>
+                            </a>
+                            <div class="img-info">
+                                <a href="video/watchvideo?id=${falsh.id}">${falsh.name}</a>
+                                <div class="btm">
+                                    <div class="user"><i></i>${falsh.user.account}</div>
+                                    <div class="online"><i></i>6732</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="pic-list__wrapper clearfix tab-cont__item">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="static/images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </c:forEach>
                     <li class="item">
                         <a href="#" class="img-link">
                             <img src="static/images/cont/main_pic.jpg" alt="#">
@@ -1149,218 +924,22 @@
                     </div>
                 </div>
                 <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
+                    <c:forEach items="${dances}" var="dance">
+                        <li class="item">
+                            <a href="video/watchvideo?id=${dance.id}" class="img-link">
+                                <img src="${dance.url}" alt="#">
+                                <span class="mask"></span>
+                                <span class="time">3:39</span>
+                            </a>
+                            <div class="img-info">
+                                <a href="video/watchvideo?id=${dance.id}">【FGO】轮到两仪式来给你洗脑了~</a>
+                                <div class="btm">
+                                    <div class="user"><i></i>${dance.user.account}</div>
+                                    <div class="online"><i></i>6732</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="pic-list__wrapper clearfix tab-cont__item">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </c:forEach>
                     <li class="item">
                         <a href="#" class="img-link">
                             <img src="images/cont/main_pic.jpg" alt="#">
@@ -1476,218 +1055,22 @@
                     </div>
                 </div>
                 <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
+                    <c:forEach items="${games}" var="game">
+                        <li class="item">
+                            <a href="video/watchvideo?id=${game.id}" class="img-link">
+                                <img src="${game.id}" alt="#">
+                                <span class="mask"></span>
+                                <span class="time">3:39</span>
+                            </a>
+                            <div class="img-info">
+                                <a href="video/watchvideo?id=${game.id}">${game.name}</a>
+                                <div class="btm">
+                                    <div class="user"><i></i>${game.user.account}</div>
+                                    <div class="online"><i></i>6732</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="pic-list__wrapper clearfix tab-cont__item">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </c:forEach>
                     <li class="item">
                         <a href="#" class="img-link">
                             <img src="images/cont/main_pic.jpg" alt="#">
@@ -1805,218 +1188,23 @@
                     </div>
                 </div>
                 <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
+
+                    <c:forEach items="${goasts}" var="goast">
+                        <li class="item">
+                            <a href="#" class="img-link">
+                                <img src="video/watchvideo?id=${goast.id}" alt="#">
+                                <span class="mask"></span>
+                                <span class="time">3:39</span>
+                            </a>
+                            <div class="img-info">
+                                <a href="video/watchvideo?id=${goast.id}">${goast.name}</a>
+                                <div class="btm">
+                                    <div class="user"><i></i>${goast.user.account}</div>
+                                    <div class="online"><i></i>6732</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="pic-list__wrapper clearfix tab-cont__item">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </c:forEach>
                     <li class="item">
                         <a href="#" class="img-link">
                             <img src="images/cont/main_pic.jpg" alt="#">
@@ -2133,218 +1321,22 @@
                     </div>
                 </div>
                 <ul class="pic-list__wrapper clearfix tab-cont__item tab-cont__cur">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
+                    <c:forEach items="${movies}" var="movie">
+                        <li class="item">
+                            <a href="video/watchvideo?id=${movie.id}" class="img-link">
+                                <img src="${movie.url}" alt="#">
+                                <span class="mask"></span>
+                                <span class="time">3:39</span>
+                            </a>
+                            <div class="img-info">
+                                <a href="video/watchvideo?id=${movie.id}">${movie.name}</a>
+                                <div class="btm">
+                                    <div class="user"><i></i>${movie.user.account}</div>
+                                    <div class="online"><i></i>6732</div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="pic-list__wrapper clearfix tab-cont__item">
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="img-link">
-                            <img src="images/cont/main_pic.jpg" alt="#">
-                            <span class="mask"></span>
-                            <span class="time">3:39</span>
-                        </a>
-                        <div class="img-info">
-                            <a href="#">【FGO】轮到两仪式来给你洗脑了~</a>
-                            <div class="btm">
-                                <div class="user"><i></i>铃椛</div>
-                                <div class="online"><i></i>6732</div>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+                    </c:forEach>
                     <li class="item">
                         <a href="#" class="img-link">
                             <img src="images/cont/main_pic.jpg" alt="#">

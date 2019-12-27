@@ -56,4 +56,11 @@ public interface VideoService {
      * @param num
      */
     public List<Video> selectHotVides(Integer num);
+
+    /**
+     * 根据视频id获取视频
+     * @param id
+     * @return
+     */
+    public Video selectVideoById(Integer id);
 }

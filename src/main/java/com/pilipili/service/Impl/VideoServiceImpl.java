@@ -45,4 +45,9 @@ public class VideoServiceImpl implements VideoService {
     public List<Video> selectHotVides(Integer num) {
         return null;
     }
+
+    @Override
+    public Video selectVideoById(Integer id) {
+        return null;
+    }
 }
