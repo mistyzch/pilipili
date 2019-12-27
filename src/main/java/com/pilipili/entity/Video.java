@@ -15,6 +15,22 @@ public class Video implements Serializable {
     private User user;
     private Category category;
 
+    @Override
+    public String toString() {
+        return "Video{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", desc='" + desc + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", clickTimes=" + clickTimes +
+                ", pictureUrls='" + pictureUrls + '\'' +
+                ", videoUrl='" + videoUrl + '\'' +
+                ", state=" + state +
+                ", user=" + user +
+                ", category=" + category +
+                '}';
+    }
+
     public Video() {
     }
 
