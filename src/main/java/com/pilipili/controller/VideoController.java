@@ -22,7 +22,17 @@ public class VideoController {
         Video video = videoService.selectVideoById(id);
         model.addAttribute("video",video);
         return "watchvideo";
+
     }
 
+    @RequestMapping("doLike")
+    public void doLike(Integer video_id,Model model){
+        model.addAttribute("msg",1);
+    }
+
+    @RequestMapping("doCollection")
+    public void doCollection(Integer video_id,Model model){
+        model.addAttribute("msg",1);
+    }
 
 }

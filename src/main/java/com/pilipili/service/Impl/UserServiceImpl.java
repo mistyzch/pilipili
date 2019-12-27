@@ -1,8 +1,11 @@
 package com.pilipili.service.Impl;
 
+import com.pilipili.common.util.MD5;
+import com.pilipili.dao.UserDao;
 import com.pilipili.entity.User;
 import com.pilipili.entity.Video;
 import com.pilipili.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,14 +14,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
+    private UserDao userDao;
+
     @Override
     public User selectUserByAccountAndPwd(String account, String password) {
-        return null;
+        password = MD5.getMD5Str(password);
+        return userDao.selectUserByAccountAndPwd(account,password);
     }
 
     @Override
     public int insertUser(User user) {
-        return 0;
+        user.setPassword(MD5.getMD5Str(user.getPassword()));
+        user.setPortraitUrl("static/images/akari.jpg");
+        user.setAge(12);
+        user.setGender(0);
+        int state = userDao.insertUser(user);
+        return state;
     }
 
     @Override

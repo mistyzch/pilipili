@@ -1,7 +1,9 @@
 package com.pilipili.service.Impl;
 
+import com.pilipili.dao.VideoDao;
 import com.pilipili.entity.Video;
 import com.pilipili.service.VideoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,9 @@ import java.util.List;
  */
 @Service
 public class VideoServiceImpl implements VideoService {
+    @Autowired
+    private VideoDao videoDao;
+
     @Override
     public List<Video> selectVideosByClickTimes(int num, Integer user_id) {
         return null;
@@ -42,12 +47,19 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> selectHotVides(Integer num) {
-        return null;
+    public List<Video> selectHotVideos(Integer num) {
+        return videoDao.selectHotVideos(num);
     }
 
     @Override
     public Video selectVideoById(Integer id) {
-        return null;
+        return videoDao.selectVideoById(id);
     }
+
+    @Override
+    public List<Video> selectVideoByCategory(Integer category_id, Integer num) {
+        return videoDao.selectVideoByCategory(category_id,num);
+    }
+
+
 }

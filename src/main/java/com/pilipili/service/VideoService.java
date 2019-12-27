@@ -55,7 +55,7 @@ public interface VideoService {
      * 获取热度前num的视频信息
      * @param num
      */
-    public List<Video> selectHotVides(Integer num);
+    public List<Video> selectHotVideos(Integer num);
 
     /**
      * 根据视频id获取视频
@@ -63,4 +63,14 @@ public interface VideoService {
      * @return
      */
     public Video selectVideoById(Integer id);
+
+    /**
+     * 根据栏目（类型）查视频
+     * @param category_id
+     * @param num 要查的数量
+     * @return
+     */
+    public List<Video> selectVideoByCategory(Integer category_id,Integer num);
+
+
 }

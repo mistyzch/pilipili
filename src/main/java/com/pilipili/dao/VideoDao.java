@@ -1,12 +1,15 @@
 package com.pilipili.dao;
 
 import com.pilipili.entity.Video;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Create by misty on 2019/12/24 15:07
  */
+@Component
 public interface VideoDao {
     /**
      * 找出当前用户点击最高的前num个视频
@@ -55,15 +58,22 @@ public interface VideoDao {
      * 获取热度前num的视频信息
      * @param num
      */
-    public List<Video> selectHotVides(Integer num);
+    public List<Video> selectHotVideos(@Param("num") Integer num);
 
     /**
      * 根据视频id获取视频
      * @param id
      * @return
      */
-    public Video selectVideoById(Integer id);
+    public Video selectVideoById(@Param("id") Integer id);
 
+    /**
+     * 根据栏目（类型）查视频
+     * @param category_id
+     * @param num 要查的数量
+     * @return
+     */
+    public List<Video> selectVideoByCategory(@Param("category_id") Integer category_id,@Param("num") Integer num);
 
 
 }

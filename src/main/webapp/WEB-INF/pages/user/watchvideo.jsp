@@ -175,6 +175,60 @@
         }
 
     </style>
+    <script>
+        $(".startVideo ul .thumbs-up i").click(function (event) {
+                event.preventDefault();
+                console.log($(this).css("color"));
+
+                $.ajax({
+                    type:"post",
+                    url:"doLike",
+                    data:{
+                        "video_id":"${video.id}"
+                    },
+                    success:function (result) {
+                        console.log(result);
+                        if(result.startStatus==true)
+                        {
+                            //取消点赞
+                            $(this).css("color","#999")
+                        }
+                        else{
+                            // console.log("点赞")
+                            $(this).css("color","rgb(0, 167, 222)")
+                        }
+                    }
+                })
+            }
+        )
+
+        $(".startVideo ul .star i").click(function (event) {
+                event.preventDefault();
+                console.log($(this).css("color"))
+
+                $.ajax({
+                    type:"post",
+                    url:"doCollection",
+                    data:{
+                        "video_id":"${video.id}"
+                    },
+                    success:function (result) {
+                        console.log(result);
+                        if(result.startStatus==true)
+                        {
+                            //取消点赞
+                            $(this).css("color","#999")
+                        }
+                        else{
+                            // console.log("点赞")
+                            $(this).css("color","rgb(0, 167, 222)")
+                        }
+                    }
+                })
+            }
+        )
+
+    </script>
 </head>
 <body>
 <div class="nav-top">
@@ -187,8 +241,8 @@
         <li>会员购</li>
 
         <li>
-            <form id="nav_searchform" action="search.html">
-                <input type="text"placeholder="输入关键字搜索" class="nav-search-keyword" name="nav-search-keyword">
+            <form id="nav_searchform" action="/pilipili/user/search">
+                <input type="text" placeholder="输入关键字搜索" class="nav-search-keyword" name="key">
                 <input type="submit" placeholder="search" value="search">
             </form>
         </li>
@@ -209,8 +263,9 @@
 
         <p>121点赞 &nbsp;&nbsp;&nbsp;    144评论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span style="position: relative;">
-                    <img src="${video.pictureUrls}" alt="" style="position: absolute; top:-3px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经作者允许禁止转载
-                </span>
+                    <img src="../static/images/video/warnning.png" alt="" style="position: absolute; top:-3px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经作者允许禁止转载
+            </span>
+
         </p>
     </div>
     <div class="videoPlay">
@@ -221,10 +276,10 @@
 
     <div class="startVideo">
         <ul>
-            <li>
+            <li class="thumbs-up">
                 <p><i class="icon-thumbs-up icon-2x"></i><span>11</span></p>
             </li>
-            <li>
+            <li class="star">
                 <p><i class="icon-star icon-2x"></i><span>123</span></p>
             </li>
             <li>

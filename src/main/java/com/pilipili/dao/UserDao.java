@@ -3,10 +3,12 @@ package com.pilipili.dao;
 import com.pilipili.entity.User;
 import com.pilipili.entity.Video;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 /**
  * Create by misty on 2019/12/24 11:37
  */
+@Component
 public interface UserDao {
 
     /**

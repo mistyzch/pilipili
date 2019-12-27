@@ -42,7 +42,7 @@ header {
 }
 .pic-list__title h2 {
   display: inline-block;
-  line-height: 64px;
+  line-height: 71px;
   font-size: 24px;
   vertical-align: top;
 }
@@ -162,7 +162,7 @@ header {
   background-color: #ccd0d7;
 }
 .more-wrap .dynamic {
-  width: 106px;
+  width: 111px;
   margin-right: 10px;
 }
 .more-wrap .more {
@@ -821,7 +821,7 @@ header {
 }
 .search-rank {
   float: left;
-  width: 42px;
+  width: 72px;
   padding-left: 26px;
   margin-right: 2px;
   color: #f25d8e;
@@ -847,7 +847,7 @@ header {
   display: block;
   width: 18px;
   height: 18px;
-  margin-top: 8px;
+  margin-top: 1px;
   background: url(../images/page_icons.png) no-repeat -663px -728px;
 }
 .search-box .btn:hover i {
@@ -929,6 +929,8 @@ header {
   float: left;
   height: 38px;
   padding: 12px 0;
+  margin-bottom: 20px;
+
 }
 .nav-list .item {
   position: relative;
