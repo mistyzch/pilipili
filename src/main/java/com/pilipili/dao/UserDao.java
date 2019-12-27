@@ -43,16 +43,16 @@ public interface UserDao {
      * 用户发布视频
      * @param video  视频
      * @param user_id  用户id
-     * @param video_id  视频id
+     * @param category_id  视频id
      */
-    public void insertVideo(Video video,Integer user_id,Integer video_id);
+    public void insertVideo(@Param("video") Video video,@Param("user_id") Integer user_id,@Param("category_id") Integer category_id);
 
     /**
      * 新增用户喜欢/点赞
      * @param video_id  视频id
      * @param user_id  用户id
      */
-    public void insertUserLike(Integer video_id, Integer user_id);
+    public void insertUserLike(@Param("video_id") Integer video_id, @Param("user_id") Integer user_id);
 
     /**
      * 更新用户点赞
@@ -60,14 +60,14 @@ public interface UserDao {
      * @param user_id  用户id
      * @param state  点赞状态
      */
-    public void updateUserLike(Integer video_id, Integer user_id, int state);
+    public void updateUserLike(@Param("video_id") Integer video_id, @Param("user_id") Integer user_id, @Param("state") int state);
 
     /**
      * 新增用户收藏
      * @param video_id  视频id
      * @param user_id  用户id
      */
-    public void insertUserCollection(Integer video_id, Integer user_id);
+    public void insertUserCollection(@Param("video_id") Integer video_id, @Param("user_id") Integer user_id);
 
     /**
      * 更新用户点赞状态
@@ -75,7 +75,7 @@ public interface UserDao {
      * @param user_id  用户id
      * @param state  收藏状态
      */
-    public void updateUserCollection(Integer video_id, Integer user_id, int state);
+    public void updateUserCollection(@Param("video_id") Integer video_id, @Param("user_id") Integer user_id, @Param("state") int state);
 
     /**
      * 用户给视频添加评论
@@ -83,7 +83,7 @@ public interface UserDao {
      * @param video_id 视频id
      * @param comment  评论
      */
-    public void insertComment(Integer user_id,Integer video_id,String comment);
+    public void insertComment(@Param("user_id") Integer user_id, @Param("video_id") Integer video_id, @Param("comment") String comment);
 
     /**
      * 回复评论
@@ -92,5 +92,5 @@ public interface UserDao {
      * @param comment  评论
      * @param parent_id  要回复评论的id
      */
-    public void addComment(Integer user_id,Integer video_id,String comment,Integer parent_id);
+    public void addComment(@Param("user_id") Integer user_id, @Param("video_id") Integer video_id, @Param("comment") String comment, @Param("parent_id") Integer parent_id);
 }

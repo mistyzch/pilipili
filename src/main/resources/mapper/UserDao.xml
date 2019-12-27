@@ -18,8 +18,27 @@
     <select id="selectUserByAccount" resultType="user">
         select id, account, password, gender, age, tel, portraitUrl from p_user where account=#{account}
     </select>
-
-
+    <insert id="insertVideo" useGeneratedKeys="true" keyProperty="id">
+        insert into p_video(`name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id) values(#{video.name}, #{video.desc}, #{video.releaseDate}, #{video.clickTimes}, #{video.pictureUrls}, #{video.videoUrl}, #{video.state}, #{user_id}, #{category_id})
+    </insert>
+    <insert id="insertUserLike" useGeneratedKeys="true" keyProperty="id">
+        insert into user_likes(`date`, state, user_id, video_id) values(now(), 1, #{user_id}, #{video_id})
+    </insert>
+    <update id="updateUserLike">
+        update user_likes set state=#{state} where user_id=#{user_id} and video_id=#{video_id}
+    </update>
+    <insert id="insertUserCollection" useGeneratedKeys="true" keyProperty="id">
+        insert into user_collection(`date`, state, user_id, video_id) values(now(), 1, #{user_id}, #{video_id})
+    </insert>
+    <update id="updateUserCollection">
+        update user_collection set state=#{state} where user_id=#{user_id} and video_id=#{video_id}
+    </update>
+    <insert id="insertComment" useGeneratedKeys="true" keyProperty="id">
+        insert into user_comments(user_id, video_id, comment_date, comment, parent_id) values(#{user_id}, #{video_id}, now(), #{comment}, null)
+    </insert>
+    <insert id="addComment" useGeneratedKeys="true" keyProperty="id">
+        insert into user_comments(user_id, video_id, comment_date, comment, parent_id) values(#{user_id}, #{video_id}, now(), #{comment}, #{parent_id})
+    </insert>
 
 
 </mapper>

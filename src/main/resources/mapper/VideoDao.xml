@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--其中namespace是命名空间，通过命名空间去寻找对应的sql标签
+必须要唯一，定位到dao层的接口上-->
+<mapper namespace="com.pilipili.dao.VideoDao">
+    <select id="selectVideosByClickTimes" resultType="video">
+        select id, `name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id from p_video where user_id=#{user_id} order by clickTimes desc limit 0, #{num}
+    </select>
+    <select id="selectVideosByCategoryId" resultType="video">
+        select * from p_category LEFT JOIN p_video on p_video.category_id=p_category.id
+    </select>
+    <update id="updateVideoClickTimes">
+        update p_video set clickTimes=clickTimes+1 where id=#{video_id}
+    </update>
+    <select id="selectVideosByUserId" resultType="video">
+        select id, `name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id from p_video where user_id=#{user_id}
+    </select>
+    <select id="selectLikeVideosByUserId" resultType="video">
+        select id, `name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id
+        from p_video,(select video_id from user_likes where user_id=#{user_id}) as a
+        where id=a.video_id
+    </select>
+    <delete id="deleteVideoById">
+        delete from p_video where id=#{video_id}
+    </delete>
+    <select id="selectHotVides" resultType="video">
+        select id, `name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id from p_video order by clickTimes desc limit 0,#{num}
+    </select>
+</mapper>
