@@ -2,6 +2,7 @@ package com.pilipili.service;
 
 import com.pilipili.entity.User;
 import com.pilipili.entity.Video;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Create by misty on 2019/12/24 15:08
@@ -91,4 +92,33 @@ public interface UserService {
      * @param parent_id  要回复评论的id
      */
     public void addComment(Integer user_id,Integer video_id,String comment,Integer parent_id);
+
+
+    /**
+     * 根据用户id和视频id获取点赞状态
+     * @param user_id
+     * @param video_id
+     * @return
+     */
+    public Integer selectLikeStateByUidAndVid(@Param("user_id") Integer user_id, @Param("video_id") Integer video_id);
+
+    /**
+     * 根据用户id和视频id获取收藏状态
+     * @param user_id
+     * @param video_id
+     * @return
+     */
+    public Integer selectCollectionStateByUidAndVid(@Param("user_id") Integer user_id,@Param("video_id") Integer video_id);
+
+    /**
+     * 根据用户id查询用户信息
+     * @param user_id
+     * @return
+     */
+    public User selectUserById(Integer user_id);
+
+    public void insertVideo(Video video, Integer user_id, String category_name);
+
+
+    public int updateUserById(User user, Integer id);
 }

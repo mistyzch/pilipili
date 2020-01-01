@@ -19,6 +19,13 @@
         <property name="prefix" value="/WEB-INF/pages/user/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 设定默认编码 -->
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+        <property name="maxUploadSize" value="99999999"></property>
+    </bean>
 
     <mvc:default-servlet-handler />
 
@@ -27,7 +34,22 @@
 <!--    <mvc:resources mapping="/images/**" location="/static/"/>-->
 <!--    <mvc:resources mapping="/images/cont/**" location="static/images/"/>-->
 
+    <!--    配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**"/>
+            <bean class="com.pilipili.web.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
-    <mvc:annotation-driven/>
+    <!-- mvc 注解驱动 并添加json 支持 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!-- 返回信息为字符串时 处理 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+            <!-- 将对象转换为json 对象 -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
 </beans>

@@ -111,8 +111,9 @@
             color: #00a7de;
         }
 
-        .comment * {
+        .comment li{
             /*border: 1px solid red;*/
+
         }
         .comment{
             margin-top: 100px;
@@ -120,8 +121,12 @@
             height: auto;
 
         }
-        comment ul il{
+        .comment ul li{
             border-bottom: 1px solid #ddd;
+            display: block;
+            width: 100%;
+            height: 120px;
+            float: top;
         }
         .comment ul li .photo{
             width: 15%;
@@ -130,7 +135,7 @@
         }
         .comment ul li .comments{
             width: 85%;
-            float: left;
+            float: right;
 
         }
         .commentText{
@@ -173,60 +178,140 @@
             color: #757575;
             font-size: 16px;
         }
-
+        #pullComment{
+            background: #00BEE7;
+            width: 8%;
+            height: 40px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+            cursor:pointer;
+        }
     </style>
     <script>
-        $(".startVideo ul .thumbs-up i").click(function (event) {
+        $(function () {
+
+            if(${user!=null}){
+                if (${video.collectionState==1}){
+                    $(".startVideo ul .star i").css("color","rgb(0, 167, 222)");
+                }
+                if(${video.likeState==1}){
+                    $(".startVideo ul .thumbs-up i").css("color","rgb(0, 167, 222)");
+                }
+            }
+
+            //评论
+            $("#pullComment").click(function (event) {
+                    event.preventDefault();
+                    let myComment=$(".doComment textarea").val();
+                    console.log(myComment);
+                    let comment=$(".comment ul");
+                    console.log(comment);
+                    $.ajax({
+                        type:"post",
+                        url:"../commitComment",
+                        data:{
+                            "myComment":myComment,
+                            "video_id":${video.id}
+                        },
+                        success:function (result) {
+                            if(result.msg==2){
+                                alert("评论前请登录！");
+                            }else{
+                                /*
+                               插入新的评论
+                            */
+                                if(result.msg==1){
+                                    comment.prepend(' <li>\n' +
+                                        '                    <div>\n' +
+                                        '                        <div class="photo">\n' +
+                                        '                            <img src="${user.portraitUrl}" alt="" width="80">\n' +
+                                        '                        </div>\n' +
+                                        '                        <div class="comments">\n' +
+                                        '                            <p style="font-size: 18px;color: darkred;">${user.account}</p>\n' +
+                                        '\n' +
+                                        '                            <p class="commentText">\n' +myComment+
+                                        '                            </p>\n' +
+                                        '                        </div>\n' +
+                                        '                    </div>\n' +
+                                        '                </li>')
+                                }else {
+                                    alert("评论失败!");
+                                }
+                                $("#commentCount").html(result.commentCount);
+                                $("#commentCount1").html(result.commentCount);
+                            }
+
+                        }
+                    })
+                }
+            )
+            //点赞
+            $(".startVideo ul .thumbs-up i").on("click",
+                function (event) {
                 event.preventDefault();
                 console.log($(this).css("color"));
-
                 $.ajax({
                     type:"post",
-                    url:"doLike",
+                    url:"../doLike",
                     data:{
                         "video_id":"${video.id}"
                     },
                     success:function (result) {
                         console.log(result);
-                        if(result.startStatus==true)
-                        {
-                            //取消点赞
-                            $(this).css("color","#999")
+                        if(result.msg=="2"){
+                            alert("请登录！");
+                        }else{
+                            if(result.msg=="0")
+                            {
+                                //取消点赞
+                                //$(this).css("color","#999");
+                                $(".startVideo ul .thumbs-up i").css("color","#999");
+                            }
+                            else{
+                                $(".startVideo ul .thumbs-up i").css("color","rgb(0, 167, 222)");
+                            }
+                            $("#likeCount").html(result.likeCount);
+                            $("#likeCount1").html(result.likeCount);
                         }
-                        else{
-                            // console.log("点赞")
-                            $(this).css("color","rgb(0, 167, 222)")
-                        }
+
                     }
                 })
-            }
-        )
+            })
 
-        $(".startVideo ul .star i").click(function (event) {
-                event.preventDefault();
-                console.log($(this).css("color"))
-
-                $.ajax({
-                    type:"post",
-                    url:"doCollection",
-                    data:{
-                        "video_id":"${video.id}"
-                    },
-                    success:function (result) {
-                        console.log(result);
-                        if(result.startStatus==true)
-                        {
-                            //取消点赞
-                            $(this).css("color","#999")
+            //收藏
+            $(".startVideo ul .star i").on("click",
+                function (event) {
+                    event.preventDefault();
+                    $.ajax({
+                        type:"post",
+                        url:"../doCollection",
+                        data:{
+                            "video_id":"${video.id}"
+                        },
+                        success:function (result) {
+                            if(result.msg=="2"){
+                                alert("请登录");
+                            }else {
+                                if(result.msg=="0")
+                                {
+                                    //取消收藏
+                                    $(".startVideo ul .star i").css("color","#999")
+                                }
+                                else{
+                                    $(".startVideo ul .star i").css("color","rgb(0, 167, 222)")
+                                }
+                                $("#collectionCount").html(result.collectionCount);
+                            }
                         }
-                        else{
-                            // console.log("点赞")
-                            $(this).css("color","rgb(0, 167, 222)")
-                        }
-                    }
+                    })
                 })
-            }
-        )
+
+        });
+
 
     </script>
 </head>
@@ -241,14 +326,14 @@
         <li>会员购</li>
 
         <li>
-            <form id="nav_searchform" action="/pilipili/user/search">
+            <form id="nav_searchform" action="search">
                 <input type="text" placeholder="输入关键字搜索" class="nav-search-keyword" name="key">
                 <input type="submit" placeholder="search" value="search">
             </form>
         </li>
         <li style="margin-left: 20%;">动态历史</li>
         <li>个人记录</li>
-        <li><a href="myInfo/myInfo.html">个人中心</a></li>
+        <li><a href="../user/myInfo">个人中心</a></li>
     </ul>
 </div>
 
@@ -261,7 +346,7 @@
             发布时间：${video.releaseDate}
         </p>
 
-        <p>121点赞 &nbsp;&nbsp;&nbsp;    144评论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p ><span id="likeCount1">${video.likeCount}</span>点赞 &nbsp;&nbsp;&nbsp;    <span id="commentCount">${video.commentCount}</span>评论&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span style="position: relative;">
                     <img src="../static/images/video/warnning.png" alt="" style="position: absolute; top:-3px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;未经作者允许禁止转载
             </span>
@@ -277,10 +362,10 @@
     <div class="startVideo">
         <ul>
             <li class="thumbs-up">
-                <p><i class="icon-thumbs-up icon-2x"></i><span>11</span></p>
+                <p><i class="icon-thumbs-up icon-2x"></i><span id="likeCount">${video.likeCount}</span></p>
             </li>
             <li class="star">
-                <p><i class="icon-star icon-2x"></i><span>123</span></p>
+                <p><i class="icon-star icon-2x"></i><span id="collectionCount">${video.collectionCount}</span></p>
             </li>
             <li>
                 <p><i class="icon-gift icon-2x"></i><span>124</span></p>
@@ -291,44 +376,34 @@
         </ul>
     </div>
 
+    <div class="doComment" style="width: 100%;height: 100px;">
+        <!--            <input type="text">-->
+        <textarea style="width: 100%;height: 80px;border: #00BEE7 1px solid; border-radius: 5px;padding: 30px 10px;font-size: 18px;" placeholder="填写评论"></textarea>
+        <div id="pullComment" style="
+                                                        ">评论</div>
+    </div>
+
     <div class="comment">
-        <p><h2>121评论</h2></p>
+        <p><h2><span id="commentCount1">${video.commentCount}</span>评论</h2></p>
         <hr style="width: 100%;margin-left: 0%;height: 2px">
         <ul>
-            <li>
-                <div>
-                    <div class="photo">
-                        <img src="../static/images/login/22.png" alt="" width="80">
-                    </div>
-                    <div class="comments">
-                        <p style="font-size: 18px;color: darkred;">22娘</p>
+            <c:forEach items="${video.comments}" var="comment">
+                <li>
+                    <div>
+                        <div class="photo">
+                            <img src="${comment.user.portraitUrl}" alt="" width="80">
+                        </div>
+                        <div class="comments">
+                            <p style="font-size: 18px;color: darkred;">${comment.user.account}</p>
 
-                        <p class="commentText">
-                            爆肝一年画小埋<br/>
-                            个中滋味与谁谈<br/>
-                            不求看官都充电<br/>
-                            但愿大家三连赞<br/>
-                        </p>
+                            <p class="commentText">
+                                ${comment.comment}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <div class="photo">
-                        <img src="../static/images/login/33.png" alt="" width="80">
-                    </div>
-                    <div class="comments">
-                        <p style="font-size: 18px;color: darkred;">33娘</p>
+                </li>
+            </c:forEach>
 
-                        <p class="commentText">
-                            爆肝4472小时（x）
-                            限流东方（√）
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
 </div>
@@ -336,48 +411,22 @@
 <div class="recommend">
     <h3>相关推荐</h3>
     <ul class="videoList">
-        <li>
-            <div class="recommendVideo">
-                <a href="#">
-                    <div class="videoCover"><img src="../static/images/video/cover1.png"  width="175" alt=""></div>
-                    <div class="conent">
-                        <p class="title"><h4>这是一个长的标题</h4></p>
-                        <p class="author">作者</p>
-                        <p class="playAndStart">20 播放 &nbsp;&nbsp; 751点赞</p>
-                    </div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="recommendVideo">
-                <a href="#">
-                    <div class="videoCover"><img src="../static/images/login/33.png"  width="175px" alt=""></div>
-                    <div class="conent">
-                        <p class="title"><h4>这是一个长的标题</h4></p>
-                        <p class="author">作者</p>
-                        <p class="playAndStart">20 播放 &nbsp;&nbsp; 751点赞</p>
-                    </div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div class="recommendVideo">
-                <a href="#">
-                    <div class="videoCover"><img src="../static/images/video/cover1.png"  width="175" alt=""></div>
-                    <div class="conent">
-                        <p class="title"><h4>这是一个长的标题</h4></p>
-                        <p class="author">作者</p>
-                        <p class="playAndStart">20 播放 &nbsp;&nbsp; 751点赞</p>
-                    </div>
-                </a>
-            </div>
-        </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <c:forEach items="${recommendVideos}" var="recommendVideo">
+            <li>
+                <div class="recommendVideo">
+                    <a href="watchvideo?id=${recommendVideo.id}">
+                        <div class="videoCover"><img src="${recommendVideo.pictureUrls}"  width="175" alt=""></div>
+                        <div class="conent">
+                            <p class="title"><h4>${recommendVideo.user.account}</h4></p>
+                            <p class="author">作者</p>
+                            <p class="playAndStart">${recommendVideo.clickTimes} 播放 &nbsp;&nbsp; <span class="dataStr"></span>点赞</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </c:forEach>
     </ul>
 </div>
 </body>
+
 </html>

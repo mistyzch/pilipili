@@ -176,7 +176,7 @@
     <div data-v-3e357e28="" class="title-line"><span class="tit" style="font-size: 38px;">登录</span></div>
     <div class="login-left">
         <div class="twoCode">
-            <img src="../static/images/login/twoCade.png" alt="" width="247" height="241" class="twoCodeImg">
+            <img src="static/images/login/twoCade.png" alt="" width="247" height="241" class="twoCodeImg">
         </div>
         <div class="login-info">
             <p class="app-link" style="text-align: center;color: #717171;font-size: 14px;">
@@ -185,8 +185,8 @@
             </p>
         </div>
         <div class="n2233">
-            <img src="../static/images/login/22.png" alt="" class="n22" width="120">
-            <img src="../static/images/login/33.png" alt="" class="n33" width="126">
+            <img src="static/images/login/22.png" alt="" class="n22" width="120">
+            <img src="static/images/login/33.png" alt="" class="n33" width="126">
         </div>
     </div>
     <div class="line"></div>

@@ -11,10 +11,10 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
-    <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
     <style>
         *{
             margin: 0px;

@@ -6,26 +6,165 @@
 <!--其中namespace是命名空间，通过命名空间去寻找对应的sql标签
 必须要唯一，定位到dao层的接口上-->
 <mapper namespace="com.pilipili.dao.VideoDao">
+    <resultMap id="resultCommentMap" type="com.pilipili.entity.Comments">
+        <result column="comment_id" property="id"/>
+        <result column="comment" property="comment"/>
+        <result column="comment_date" property="commentDate"/>
+        <result column="parent_id" property="parentId"/>
+        <association property="user" javaType="com.pilipili.entity.User">
+            <result column="user_id" property="id"/>
+            <result column="account" property="account"/>
+            <result column="portraitUrl" property="portraitUrl"/>
+        </association>
+    </resultMap>
 
-    <select id="selectVideoById" parameterType="int" resultType="com.pilipili.entity.Video">
-        select id,`name`,`desc`,releaseDate,clickTimes,pictureUrls,state,videoUrl
+    <resultMap id="resultVideoUserMap" type="com.pilipili.entity.Video">
+        <result property="id" column="video_id"/>
+        <result property="name" column="name"/>
+        <result property="desc" column="descp"/>
+        <result property="releaseDate" column="releaseDate"/>
+        <result property="clickTimes" column="clickTimes"/>
+        <result property="pictureUrls" column="pictureUrls"/>
+        <result property="videoUrl" column="videoUrl"/>
+        <result property="state" column="state"/>
+        <result property="pictureUrls" column="pictureUrls"/>
+        <result property="videoUrl" column="videoUrl"/>
+        <result property="video_length" column="video_length"/>
+        <result property="category_id" column="category_id"/>
+        <association property="user" javaType="user">
+            <result property="id" column="user_id"/>
+            <result property="account" column="account"/>
+            <result property="gender" column="gender"/>
+            <result property="age" column="age"/>
+            <result property="tel" column="tel"/>
+            <result property="portraitUrl" column="portraitUrl"/>
+        </association>
+    </resultMap>
+
+
+
+
+
+
+    <select id="selectVideosByClickTimes" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,a.category_id category_id,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id
+        order by clickTimes desc
+        limit 0, #{num}
+    </select>
+    <select id="selectVideosByCategoryId" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,a.category_id category_id,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id and category_id = #{category_id}
+        limit 0,#{num}
+    </select>
+    <update id="updateVideoClickTimes">
+        update p_video
+        set clickTimes=clickTimes+#{addClickTimes}
+        where id=#{video_id}
+    </update>
+    <select id="selectVideosByUserId" resultType="video">
+        select id, `name`, `desc`, releaseDate, clickTimes, pictureUrls, videoUrl, state, user_id, category_id
         from p_video
-        where id = #{id}
+        where user_id=#{user_id}
+    </select>
+    <select id="selectLikeVideosByUserId" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id
+    </select>
+    <delete id="deleteVideoById">
+        delete
+        from p_video
+        where id=#{video_id}
+    </delete>
+
+    <select id="selectVideoById" parameterType="Integer" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,a.category_id category_id,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id and a.id = #{id}
     </select>
 
-    <select id="selectVideoByCategory" parameterType="int" resultType="com.pilipili.entity.Video">
-        select id,`name`,`desc`,releaseDate,clickTimes,pictureUrls,state,videoUrl
-        from p_video
-        where category_id = #{category_id}
+    <select id="selectVideoByCategory" parameterType="Integer" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id and a.category_id = #{category_id}
         limit 0,#{num}
     </select>
 
 
-    <select id="selectHotVideos" parameterType="int" resultType="com.pilipili.entity.Video">
-        select id,`name`,`desc`,releaseDate,clickTimes,pictureUrls,state,videoUrl
-        from p_video
+    <select id="selectHotVideos" parameterType="Integer" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id
+        limit 0,#{num}
+    </select>
+
+    <select id="getLikeCount" resultType="Integer" parameterType="Integer">
+        select count(*)
+        from user_likes
+        where video_id = #{video_id} and state = 1
+    </select>
+
+    <select id="getCollectionCount" resultType="Integer" parameterType="Integer">
+        select count(*)
+        from user_collection
+        where video_id = #{video_id} and state = 1
+    </select>
+
+    <select id="selectVideoByKey" resultMap="resultVideoUserMap">
+        select a.id video_id,a.name name,a.desc descp,
+        a.releaseDate releaseDate,a.clickTimes clickTimes,
+        a.pictureUrls pictureUrls,a.videoUrl videoUrl,a.state state,a.video_length video_length,
+        b.id user_id,b.account account,b.gender gender,b.age age,
+        b.tel tel,b.portraitUrl portraitUrl
+        from p_video a,p_user b
+        where a.user_id=b.id and a.name like '%${key}%'
         order by clickTimes
         limit 0,#{num}
+    </select>
+
+    <select id="getCommentCount" parameterType="Integer" resultType="Integer">
+        select count(*)
+        from user_comments
+        where video_id = #{video_id}
+    </select>
+
+    <select id="selectVideoCommentsByVideoId" resultMap="resultCommentMap" parameterType="Integer">
+        select a.id comment_id,a.comment_date comment_date,a.parent_id parent_id,a.comment comment,b.id user_id,b.account account,b.portraitUrl portraitUrl
+        from user_comments a,p_user b
+        where a.user_id=b.id and a.video_id = #{video_id}
+    </select>
+
+    <select id="selectCategoryByCategoryName" resultType="com.pilipili.entity.Category">
+        select id, `name`, description, parent_id, english_name
+        from p_category
+        where english_name=#{name}
     </select>
 
 

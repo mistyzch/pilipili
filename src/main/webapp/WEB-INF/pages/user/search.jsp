@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: misty
@@ -6,6 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,7 +140,7 @@
         <li>赛事</li>
         <li style="margin-left: 50%;">动态历史</li>
         <li>个人记录</li>
-        <li><a href="myInfo/myInfo.html">个人中心</a></li>
+        <li><a href="../user/myInfo">个人中心</a></li>
     </ul>
 </div>
 <div class="search">
@@ -163,77 +166,28 @@
     <br/>
     <hr>
     <ul class="videoList">
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
+        <c:forEach items="${searchVideos}" var="searchVideo">
+            <li>
+                <div class="video">
+                    <a href="/pilipili/video/watchvideo?id=${searchVideo.id}">
+                        <img src="${searchVideo.pictureUrls}" style="width: 100%;" alt="">
+                    </a>
+                    <div class="conent">
+                        <p class="title">${searchVideo.name}</p>
+                        <p class="playAndStart"><i class="icon-play-circle"></i>${searchVideo.clickTimes} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i><sapn class="dataStr">${searchVideo.releaseDate}</sapn></p>
+                        <p class="author"><i class="icon-user"></i>${searchVideo.user.account}</p>
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="video">
-                <img src="../static/images/search/cover1.png" style="width: 100%;" alt="">
-                <div class="conent">
-                    <p class="title">这是一个长的标题这是一个长的标题</p>
-                    <p class="playAndStart"><i class="icon-play-circle"></i>20 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="icon-time"></i>2019-1-8</p>
-                    <p class="author"><i class="icon-user"></i>Mike&nbsp;</p>
-                </div>
-            </div>
-        </li>
+            </li>
+        </c:forEach>
     </ul>
 </div>
 </body>
+<script>
+    $(function () {
+        $(".dataStr").each(function (e) {
+            $(this).html($(this).html().split(" ")[0]);
+        })
+    })
+</script>
 </html>

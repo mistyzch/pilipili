@@ -6,24 +6,42 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/VideoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/search.jsp" afterDir="false" />
+    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="整合了jsp页面、完成了登录、注册的控制器、改了一些bug">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/Impl/DoCollectionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/Impl/DoLikeMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/StateMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/GetVideoLengthAndPic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/SaveVideoAndPic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/SessionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/CommonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyHttpSessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyServletRequestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/myInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/myPhoto.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/upload.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/VideoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/VideoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/VideoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Video.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/VideoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/VideoListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/VideoListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/VideoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VideoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/watchvideo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/watchvideo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +54,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -79,23 +97,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\WEB-INF\pages\user" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\java\com\pilipili\common\util" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\resources\mapper" />
+      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\WEB-INF\pages\user" />
       <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\resources\mapper" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\java\com\pilipili\common\util" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\css" />
-      <recent name="C:\Users\lenovo\Desktop\git\pilipili\src\main\webapp\static\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -217,7 +236,16 @@
       <workItem from="1577411502656" duration="8233000" />
       <workItem from="1577421490118" duration="2483000" />
       <workItem from="1577424438044" duration="785000" />
-      <workItem from="1577426242834" duration="1617000" />
+      <workItem from="1577426242834" duration="30774000" />
+      <workItem from="1577498912515" duration="20310000" />
+      <workItem from="1577523923684" duration="272000" />
+      <workItem from="1577524509642" duration="372000" />
+      <workItem from="1577533240506" duration="605000" />
+      <workItem from="1577539070667" duration="23000" />
+      <workItem from="1577757896368" duration="9438000" />
+      <workItem from="1577772177810" duration="6307000" />
+      <workItem from="1577779690646" duration="2096000" />
+      <workItem from="1577874145484" duration="5229000" />
     </task>
     <task id="LOCAL-00001" summary="dao层">
       <created>1577172332023</created>
@@ -310,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577329144338</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="整合了jsp页面、完成了登录、注册的控制器、改了一些bug">
+      <created>1577428374911</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577428374911</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,73 +383,93 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="456" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1577423563667" />
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1577416086706">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1577879091692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1577416086706" />
-    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577329143447">
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1577879091692" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577461189371">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577329143447" />
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom" timestamp="1577427595135">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577461189371" />
+    <state x="499" y="168" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1577774086802">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.0.center" timestamp="1577427595119">
+    <state x="499" y="168" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1577774086802" />
+    <state x="605" y="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1577773535570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577427595119" />
-    <state width="1493" height="232" key="GridCell.Tab.0.left" timestamp="1577427595119">
+    <state x="605" y="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1577773535570" />
+    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577878682551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577427595119" />
-    <state width="1493" height="232" key="GridCell.Tab.0.right" timestamp="1577427595135">
+    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577878682551" />
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.1.bottom" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.1.center" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.1.left" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.1.right" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.1.bottom" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.2.bottom" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.1.center" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.2.center" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.1.left" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.2.left" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.1.right" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state width="1493" height="232" key="GridCell.Tab.2.right" timestamp="1577427595135">
+    <state width="1493" height="282" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.2.bottom" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577427595135" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577329155932">
+    <state width="1493" height="282" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.2.center" timestamp="1577880041170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577329155932" />
+    <state width="1493" height="282" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.2.left" timestamp="1577880041170">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="282" key="GridCell.Tab.2.right" timestamp="1577880041170">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="282" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1577774090098">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577774090098" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577428476219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577428476219" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577329391794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1577329391794" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1577325961435">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1577443676904">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1577325961435" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1577443676904" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1577502517776">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1577502517776" />
   </component>
 </project>

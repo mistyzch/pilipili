@@ -1,6 +1,7 @@
 package com.pilipili.service.Impl;
 
 import com.pilipili.dao.VideoDao;
+import com.pilipili.entity.Comments;
 import com.pilipili.entity.Video;
 import com.pilipili.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +19,17 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public List<Video> selectVideosByClickTimes(int num, Integer user_id) {
-        return null;
+        return videoDao.selectVideosByClickTimes(num,user_id);
     }
 
     @Override
     public List<Video> selectVideosByCategoryId(int num, Integer category_id) {
-        return null;
+        return videoDao.selectVideosByCategoryId(num,category_id);
     }
 
     @Override
     public void updateVideoClickTimes(Integer video_id, Integer addClickTimes) {
-
+        videoDao.updateVideoClickTimes(video_id,addClickTimes);
     }
 
     @Override
@@ -59,6 +60,31 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public List<Video> selectVideoByCategory(Integer category_id, Integer num) {
         return videoDao.selectVideoByCategory(category_id,num);
+    }
+
+    @Override
+    public Integer getLikeCount(Integer video_id) {
+        return videoDao.getLikeCount(video_id);
+    }
+
+    @Override
+    public Integer getCollectionCount(Integer video_id) {
+        return videoDao.getCollectionCount(video_id);
+    }
+
+    @Override
+    public List<Video> selectVideoByKey(String key, Integer num) {
+        return videoDao.selectVideoByKey(key,num);
+    }
+
+    @Override
+    public Integer getCommentCount(Integer video_id) {
+        return videoDao.getCommentCount(video_id);
+    }
+
+    @Override
+    public List<Comments> selectVideoCommentsByVideoId(Integer video_id) {
+        return videoDao.selectVideoCommentsByVideoId(video_id);
     }
 
 

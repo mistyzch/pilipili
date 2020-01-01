@@ -1,6 +1,8 @@
 package com.pilipili.service;
 
+import com.pilipili.entity.Comments;
 import com.pilipili.entity.Video;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -72,5 +74,42 @@ public interface VideoService {
      */
     public List<Video> selectVideoByCategory(Integer category_id,Integer num);
 
+
+    /**
+     * 获取该视频点赞人数
+     * @param video_id
+     * @return
+     */
+    public Integer getLikeCount(Integer video_id);
+
+    /**
+     * 获取该视频收藏人数
+     * @param video_id
+     * @return
+     */
+    public Integer getCollectionCount(Integer video_id);
+
+    /**
+     * 根据key模糊查询
+     * @param key
+     * @param num
+     * @return
+     */
+    public List<Video> selectVideoByKey(String key, Integer num);
+
+
+    /**
+     * 获取该视频的评论数
+     * @param video_id
+     * @return
+     */
+    public Integer getCommentCount(@Param("video_id") Integer video_id);
+
+    /**
+     * 获取该视频的评论
+     * @param video_id
+     * @return
+     */
+    public List<Comments> selectVideoCommentsByVideoId(@Param("video_id") Integer video_id);
 
 }

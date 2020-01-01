@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,24 +148,24 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="user/userinfo">个人信息</a></li>
-                            <li><a href="user/logout">注销</a></li>
+                            <li><a href="logout">注销</a></li>
                           </ul>
                         </span>
                     </c:if>
                     <div class="login-box">
 
                         <c:if test="${user == null }">
-                            <a href="user/login">登录</a>
+                            <a href="login">登录</a>
                         </c:if>
                         <span></span>
-                        <a href="user/register">注册</a>
+                        <a href="register">注册</a>
                     </div>
                     <div class="user-post">
-                        <a href="#" class="link">投 稿</a>
+                        <a href="user/upload" class="link">投 稿</a>
                         <div class="user-post__hover header-hover">
-                            <a href="#" class="post">视频投稿</a>
-                            <a href="#" class="manage">投稿管理</a>
-                            <a href="#" class="create">创作中心</a>
+                            <a href="user/upload" class="post">视频投稿</a>
+                            <a href="user/upload" class="manage">投稿管理</a>
+                            <a href="user/upload" class="create">创作中心</a>
                         </div>
                     </div>
                 </div>
@@ -179,17 +180,7 @@
                 <div class="search-rank">排行榜</div>
                 <div class="search-box">
                     <input type="text" class="text" name="key" placeholder="Search here...">
-                    <a href="user/search" class="btn"><i></i></a>
-                    <div class="search-history">
-                        <div class="title">历史搜索</div>
-                        <div class="list">
-                            <a href="#">努巴尼欢乐秀<i></i></a>
-                            <a href="#">主播真会玩守望篇<i></i></a>
-                            <a href="#">主播真会玩女神篇<i></i></a>
-                            <a href="#">暴暴勺暴暴<i></i></a>
-                            <a href="#">OverWatch<i></i></a>
-                        </div>
-                    </div>
+                    <a href="video/search" class="btn"><i></i></a>
                 </div>
             </div>
             <div class="header-title">哔哩哔哩 (゜-゜)つロ 干杯~</div>
@@ -695,7 +686,7 @@
                             <a href="video/watchvideo?id=${extension.id}" class="img-link">
                                 <img src="${extension.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${extension.video_length}" pattern="HH:mm:ss"/> </span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${extension.id}">${extension.name}</a>
@@ -706,7 +697,7 @@
             </div>
             <div class="main-side fr">
                 <div class="promote-side__title">
-                    <a href="#">在线人数：715509</a>
+                    <a href="#">在线人数：${userCounts}</a>
 <%--                    <span>|</span>--%>
 <%--                    <a href="#">最新投稿：5806</a>--%>
                 </div>
@@ -738,7 +729,7 @@
                             <a href="video/watchvideo?id=${animation.id}" class="img-link">
                                 <img src="${animation.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${animation.video_length}" pattern="HH:mm:ss"/></span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${animation.id}">${animation.name}</a>
@@ -828,7 +819,7 @@
                             <a href="video/watchvideo?id=${dance.id}" class="img-link">
                                 <img src="${dance.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${dance.video_length}" pattern="HH:mm:ss"/></span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${dance.id}">${dance.name}</a>
@@ -945,7 +936,7 @@
                             <a href="video/watchvideo?id=${game.id}" class="img-link">
                                 <img src="${game.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${game.video_length}" pattern="HH:mm:ss"/></span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${game.id}">${game.name}</a>
@@ -1065,7 +1056,7 @@
                             <a href="video/watchvideo?id=${ghostVideo.id}" class="img-link">
                                 <img src="${ghostVideo.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${ghostVideo.video_length}" pattern="HH:mm:ss"/></span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${ghostVideo.id}">${ghostVideo.name}</a>
@@ -1183,7 +1174,7 @@
                             <a href="video/watchvideo?id=${film.id}" class="img-link">
                                 <img src="${film.pictureUrls}" alt="#">
                                 <span class="mask"></span>
-                                <span class="time">3:39</span>
+                                <span class="time"><fmt:formatDate value="${film.video_length}" pattern="HH:mm:ss"/></span>
                             </a>
                             <div class="img-info">
                                 <a href="video/watchvideo?id=${film.id}">${film.name}</a>

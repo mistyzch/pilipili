@@ -11,14 +11,24 @@ public class Category implements Serializable {
     private String name;
     private String description;
     private Integer parent_id;
+    private String englishName;
 
     public Category() {
     }
 
-    public Category(String name, String description, Integer parent_id) {
+    public Category(String name, String description, Integer parent_id,String englishName) {
         this.name = name;
         this.description = description;
         this.parent_id = parent_id;
+        this.englishName = englishName;
+    }
+
+    public String getEnglishName() {
+        return englishName;
+    }
+
+    public void setEnglishName(String englishName) {
+        this.englishName = englishName;
     }
 
     public Integer getId() {
