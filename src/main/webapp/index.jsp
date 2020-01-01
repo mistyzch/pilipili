@@ -697,9 +697,7 @@
             </div>
             <div class="main-side fr">
                 <div class="promote-side__title">
-                    <a href="#">在线人数：${userCounts}</a>
-<%--                    <span>|</span>--%>
-<%--                    <a href="#">最新投稿：5806</a>--%>
+                    <a href="#">在线人数：${applicationScope.userCounts}</a>
                 </div>
                 <a href="#" class="promote-side__img"><img src="static/images/cont/main_pic.jpg" alt="#"></a>
             </div>

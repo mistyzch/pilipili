@@ -6,41 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="整合了jsp页面、完成了登录、注册的控制器、改了一些bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/Impl/DoCollectionMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/Impl/DoLikeMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/Interface/StateMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/GetVideoLengthAndPic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/SaveVideoAndPic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/common/util/SessionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/CommonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyHttpSessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyServletRequestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/myInfo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/myPhoto.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/upload.jsp" afterDir="false" />
+    <list default="true" id="87c1468f-5eb0-4655-b41c-8cd34fb0c4d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/VideoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/dao/VideoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/entity/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/Impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/service/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/VideoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VideoDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/watchvideo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/watchvideo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyHttpSessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pilipili/web/listener/MyHttpSessionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +213,7 @@
       <workItem from="1577757896368" duration="9438000" />
       <workItem from="1577772177810" duration="6307000" />
       <workItem from="1577779690646" duration="2096000" />
-      <workItem from="1577874145484" duration="5229000" />
+      <workItem from="1577874145484" duration="6787000" />
     </task>
     <task id="LOCAL-00001" summary="dao层">
       <created>1577172332023</created>
@@ -345,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577428374911</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="整合了所有的功能，包括上传、修改信息等">
+      <created>1577880412385</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1577880412385</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +347,8 @@
     <MESSAGE value="整合了jsp页面、完成了登录的控制器" />
     <MESSAGE value="整合了jsp页面、完成了登录、注册的控制器" />
     <MESSAGE value="整合了jsp页面、完成了登录、注册的控制器、改了一些bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合了jsp页面、完成了登录、注册的控制器、改了一些bug" />
+    <MESSAGE value="整合了所有的功能，包括上传、修改信息等" />
+    <option name="LAST_COMMIT_MESSAGE" value="整合了所有的功能，包括上传、修改信息等" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577374836964">
@@ -399,66 +375,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="605" y="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1577773535570" />
-    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577878682551">
+    <state x="372" y="4" key="CommitChangelistDialog2" timestamp="1577880409350">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577878682551" />
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1577880041170">
+    <state x="372" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577880409350" />
+    <state width="1493" height="140" key="GridCell.Tab.0.bottom" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.0.center" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.0.left" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.0.right" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.1.bottom" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.1.bottom" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.1.center" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.1.center" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.1.left" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.1.left" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.1.right" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.1.right" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.2.bottom" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.2.bottom" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.2.center" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.2.center" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.2.left" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.2.left" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
-    <state width="1493" height="282" key="GridCell.Tab.2.right" timestamp="1577880041170">
+    <state width="1493" height="140" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
+    <state width="1493" height="140" key="GridCell.Tab.2.right" timestamp="1577881509454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577880041170" />
+    <state width="1493" height="140" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1577881509454" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1577774090098">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577774090098" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577428476219">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1577880435268">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577428476219" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577880435268" />
     <state x="562" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577329391794">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

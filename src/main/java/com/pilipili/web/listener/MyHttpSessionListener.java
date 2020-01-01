@@ -22,6 +22,8 @@ public class MyHttpSessionListener implements HttpSessionListener {
         //重新在servletContext中保存userCounts
         se.getSession().getServletContext().setAttribute("userCounts", userCounts);
 
+        System.out.println(userCounts);
+
     }
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
